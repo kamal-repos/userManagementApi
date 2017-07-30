@@ -1,5 +1,6 @@
 package com.user.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,8 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/users", method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
 	public List<User> getAllUsers() {
-		return userService.getAllUsers();
+		return new ArrayList<>();
 	}
 }
